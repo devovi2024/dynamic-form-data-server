@@ -26,3 +26,38 @@ const handleFormSubmission = (req, res) => {
         })
     })
 }
+
+
+
+
+Handle viewing user data 
+// Handle viewing user data 
+const handleViewUserData = (res) =>{
+    fs.readFile('userData.json', 'utf8', (err, data) => {
+        if(err){
+            res.writeHead(500, {'Content-Type': 'text/plain'});
+            res.end('Error reading Data')
+        } else {
+            res.writeHead(200, {'Content-type': 'application/json'});
+            res.end(data)
+        }
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
