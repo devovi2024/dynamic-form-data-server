@@ -84,7 +84,8 @@ const server = http.createServer((req, res) => {
 
 
 
-
+// Start server on port 5500
+server.listen(5500, () => console.log('Server running on http://localhost:5500'));
 
 
 
